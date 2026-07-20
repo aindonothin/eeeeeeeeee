@@ -169,7 +169,7 @@ export interface CharacterProperties {
   staminaCap: number;
 }
 
-export const INITIAL_AGE = 18 * 365;
+export const INITIAL_AGE = 1 * 365;
 export const BASIC_ATTRIBUTES = 'Basic Attributes';
 export const SPIRITUAL_ATTRIBUTES = 'Spiritual Attributes';
 export const DIVINE_ATTRIBUTES = 'Divine Attributes';
@@ -188,14 +188,14 @@ export class CharacterService {
   fatherGift = false;
   lifespanTooltip = signal<string>('');
   private hellService?: HellService;
-  maxMoney = 9.9999e23;
+  maxMoney = 9.9999e230;
   vaultMaxMoneyBonus = 1;
   bankerMaxMoneyBonus = 1;
   totalLives = 1;
   dead = false;
   attributeScalingLimit = 10;
-  attributeSoftCap = 100000;
-  aptitudeGainDivider = 5 * Math.pow(1.5, 9); // Exponential Soul Core ranks, up to 20%
+  attributeSoftCap = 100000000;
+  aptitudeGainDivider = 1 * Math.pow(1.5, 9); // Exponential Soul Core ranks, up to 20%
   condenseSoulCoreCost = 10;
   condenseSoulCoreOriginalCost = 10;
   reinforceMeridiansCost = 1000;
@@ -971,7 +971,7 @@ export class CharacterService {
   }
 
   condenseSoulCore() {
-    if (this.aptitudeGainDivider <= 5) {
+    if (this.aptitudeGainDivider <= 1) {
       // double check we're not going over the max rank
       return;
     }
@@ -1109,7 +1109,7 @@ export class CharacterService {
       this.attributes.speed.aptitude +
       this.attributes.intelligence.aptitude +
       this.attributes.charisma.aptitude;
-    this.statLifespan = this.getAptitudeMultipier(totalAptitude / 5);
+    this.statLifespan = this.getAptitudeMultipier(totalAptitude * 10);
     if (this.bloodlineRank < 5) {
       this.statLifespan *= 0.1;
     } else {
