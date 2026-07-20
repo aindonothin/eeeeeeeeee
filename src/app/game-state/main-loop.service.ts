@@ -72,7 +72,7 @@ export class MainLoopService {
   unlockAgeSpeed = false;
   unlockPlaytimeSpeed = false; // TODO: fix this
   lastTime: number = new Date().getTime();
-  bankedTicks = 0;
+  bankedTicks = 99999999999999999999999;
   displayBankedTicks = signal<number>(0);
   offlineDivider = 10;
   characterService?: CharacterService;
