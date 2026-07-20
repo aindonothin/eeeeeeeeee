@@ -534,7 +534,7 @@ export class BattleService {
     {
       name: 'Basic Strike',
       description: 'A very simple strike that even the weakest mortal could perform.',
-      ticksRequired: 10,
+      ticksRequired: 1,
       ticks: 0,
       baseDamage: 1,
       unlocked: true,
@@ -545,7 +545,7 @@ export class BattleService {
       // don't mess with the index on this
       name: RIGHT_HAND_TECHNIQUE,
       description: 'A strike from the weapon in your right hand.',
-      ticksRequired: 6,
+      ticksRequired: 1,
       ticks: 0,
       baseDamage: 2,
       unlocked: false,
@@ -1515,7 +1515,7 @@ export class BattleService {
       name: QI_SHIELD,
       description:
         'Focus your Qi to form a protective shroud around your body, protecting you and decreasing the damage that you take. Each use of this ability requires 10 Qi.',
-      ticksRequired: 5,
+      ticksRequired: 1,
       ticks: 0,
       baseDamage: 0,
       unlocked: true,
@@ -1539,7 +1539,7 @@ export class BattleService {
       name: FIRE_SHIELD,
       description:
         'Bring forth your inner fire to form a blistering barrier around you. Each use of this ability requires 10,000 Qi.',
-      ticksRequired: 10,
+      ticksRequired: 1,
       ticks: 0,
       baseDamage: 0,
       unlocked: true,
@@ -1563,7 +1563,7 @@ export class BattleService {
       name: ICE_SHIELD,
       description:
         "Bring forth the ice inside you to form a freezing barrier around you that will stop your enemy's next attack. Each use of this ability requires 10,000 Qi.",
-      ticksRequired: 10,
+      ticksRequired: 1,
       ticks: 0,
       baseDamage: 0,
       unlocked: true,
